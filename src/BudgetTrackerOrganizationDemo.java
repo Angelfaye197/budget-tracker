@@ -2,8 +2,8 @@ import components.simplewriter.SimpleWriter;
 import components.simplewriter.SimpleWriter1L;
 
 /**
- * Demonstrates using BudgetTracker to manage a student organization's event
- * finances.
+ * Demonstrates using BudgetTracker through a StudentOrganization class to
+ * manage event finances.
  */
 public final class BudgetTrackerOrganizationDemo {
 
@@ -23,33 +23,31 @@ public final class BudgetTrackerOrganizationDemo {
 
         SimpleWriter out = new SimpleWriter1L();
 
-        BudgetTracker event = new BudgetTracker1();
+        /*
+         * Create an engineering club with an $800 event budget.
+         */
+        StudentOrganization event = new StudentOrganization("Engineering Club",
+                80000);
 
         /*
-         * Event spending limit: $800
+         * Record organization funding.
          */
-        event.setBudget(80000);
+        event.receiveFunding("Club Funding", 100000);
 
         /*
-         * Organization funding and expenses
+         * Record event expenses.
          */
-        event.addTransaction("Club Funding", 100000, "Funding");
+        event.recordExpense("Venue Rental", 35000, "Venue");
+        event.recordExpense("Food and Drinks", 25000, "Catering");
+        event.recordExpense("Decorations", 15000, "Supplies");
+        event.recordExpense("Equipment Rental", 10000, "Equipment");
 
-        event.addTransaction("Venue Rental", -35000, "Venue");
-
-        event.addTransaction("Food and Drinks", -25000, "Catering");
-
-        event.addTransaction("Decorations", -15000, "Supplies");
-
-        event.addTransaction("Equipment Rental", -10000, "Equipment");
-
+        /*
+         * Display the organization's financial information.
+         */
         out.println("===== EVENT BUDGET =====");
 
-        out.println("Spending Limit: $" + event.getBudget() / 100.0);
-
-        out.println("Total Funding: $" + event.getTotalIncome() / 100.0);
-
-        out.println("Total Expenses: $" + event.getTotalExpenses() / 100.0);
+        out.println("Organization: " + event.getName());
 
         out.println("Remaining Funds: $" + event.getBalance() / 100.0);
 
