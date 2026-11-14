@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Angel Faye Baleskie
+- **Dot Number**: Baleskie.1
+- **Due Date**: 11/13/2026 @ 1:50pm
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +98,11 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I am currently studying Computer Engineering at The Ohio State University. I am interested in software development, hardware, and technology, particularly how engineering can be used to solve real-world problems and improve people's lives. Through my coursework, research, and internship experiences, I hope to continue strengthening my programming, problem-solving, and technical skills. My career goal is to work in a field where I can combine technology, innovation, and healthcare to make a meaningful impact.
+
+Outside of academics, I enjoy going to the gym, shopping, spending time with family and friends, and exploring new places. I also value personal growth, staying organized, and challenging myself to learn new things. These interests motivate me to create practical projects that are useful in everyday life.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +110,6 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -142,8 +129,6 @@ list-like components that have different ways of manipulating the data. Think
 about different ways you might allow a client to manipulate your component.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +196,90 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Budget Tracker
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A Budget Tracker component that allows users to record income and expenses, organize transactions into categories, and monitor their spending against a budget. Monetary values are stored in cents to avoid floating-point precision issues.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - addTransaction(String description, long amount, String category) – Adds a transaction.
+    - removeTransaction(int index) – Removes and returns a transaction.
+    - getTransaction(int index) – Retrieves a transaction without removing it.
+    - size() – Returns the number of transactions.
+    - setBudget(long limit) – Sets the spending limit.
+    - getBudget() – Returns the spending limit.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - getTotalIncome() – Calculates total income.
+    - getTotalExpenses() – Calculates total expenses.
+    - getBalance() – Calculates the remaining balance.
+    - isOverBudget() – Determines whether spending exceeds the budget.
+    - getExpensesByCategory(String category) – Calculates expenses in a specific category.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
+  - **Additional Considerations**
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. Users can add and remove transactions and change the budget, which modifies the component's state.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. It uses a Transaction class to represent individual transactions, including their description, amount, and category. It also uses an OSU Sequence to store transactions.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No enums are required. Transaction categories are stored as strings, and monetary values are stored as cents.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. For example, getTotalExpenses() uses size() and getTransaction() to examine each transaction and sum the expenses without accessing the internal sequence directly.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Task Manager
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A Task Manager component that helps users organize assignments, deadlines, and daily responsibilities. Users can add tasks, mark them as completed, and track their progress.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - addTask(String name, String dueDate) – Adds a task.
+    - removeTask(int index) – Removes a task.
+    - getTask(int index) – Retrieves a task.
+    - markCompleted(int index) – Marks a task as completed.
+    - size() – Returns the total number of tasks.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - getCompletedCount() – Counts completed tasks.
+    - getIncompleteCount() – Counts unfinished tasks.
+    - isAllCompleted() – Checks whether every task is completed.
+    - getCompletionPercentage() – Calculates the percentage of completed tasks.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      -  Yes. Tasks can be added, removed, or marked as completed.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. A Task class could store the task name, due date, and completion status.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - An enum could represent task priorities such as LOW, MEDIUM, and HIGH.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. For example, getCompletedCount() could use size() and getTask() to count tasks marked as completed.
+
+- Component Design #3: Workout Tracker
+  - **Description**:
+    - A Workout Tracker component that helps users record exercise sessions, monitor workout duration, and track their fitness progress.
+  - **Kernel Methods**:
+    - addWorkout(String exercise, int duration, int calories) – Records a workout.
+    - removeWorkout(int index) – Removes a workout.
+    - getWorkout(int index) – Retrieves a workout.
+    - size() – Returns the number of recorded workouts.
+  - **Secondary Methods**:
+    - getTotalDuration() – Calculates total workout time.
+    - getTotalCalories() – Calculates total calories burned.
+    - getAverageDuration() – Calculates the average workout duration.
+    - getWorkoutCount(String exercise) – Counts workouts of a particular exercise type.
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - Yes. Users can add and remove workouts as they complete exercise sessions.
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - Yes. A Workout class could store the exercise name, duration, and estimated calories burned.
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - An enum could represent workout types such as STRENGTH, CARDIO, and MOBILITY.
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - Yes. For example, getTotalDuration() could use size() and getWorkout() to calculate the total minutes spent exercising.
 
 ## Post-Assignment
 
@@ -280,8 +287,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -299,13 +304,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## YYYY.MM.DD
+## 2026.11.12
 
 ### Added
 
-- Designed a <!-- insert name of component 1 here --> component
-- Designed a <!-- insert name of component 2 here --> component
-- Designed a <!-- insert name of component 3 here --> component
+- Designed three possible components: BudgetTracker, TaskManager, and WorkoutTracker.
+- Selected BudgetTracker for the portfolio project.
+- Created the BudgetTracker kernel and enhanced interfaces.
+- Implemented BudgetTracker1 using the OSU Sequence component.
+- Implemented BudgetTrackerSecondary with financial calculations.
+- Created a Transaction class to represent income and expenses.
+- Added JUnit tests for component operations.
+- Created a personal budgeting demonstration.
+- Created a student organization budgeting demonstration.
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -320,8 +331,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -333,8 +342,6 @@ you have to submit any PDFs.
 <!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
 
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -360,8 +367,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/

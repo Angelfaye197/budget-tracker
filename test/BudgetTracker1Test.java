@@ -1,4 +1,3 @@
-
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -33,5 +32,22 @@ public class BudgetTracker1Test {
         assertEquals("Paycheck", tracker.getTransaction(0).getDescription());
         assertEquals(150000L, tracker.getTransaction(0).getAmount());
         assertEquals("Income", tracker.getTransaction(0).getCategory());
+    }
+
+    /**
+     * Tests removing a transaction from the tracker.
+     */
+    @Test
+    public void testRemoveTransaction() {
+        BudgetTracker tracker = new BudgetTracker1();
+
+        tracker.addTransaction("Groceries", -5000, "Food");
+        tracker.addTransaction("Gas", -3000, "Transport");
+
+        Transaction removed = tracker.removeTransaction(0);
+
+        assertEquals("Groceries", removed.getDescription());
+        assertEquals(1, tracker.size());
+        assertEquals("Gas", tracker.getTransaction(0).getDescription());
     }
 }

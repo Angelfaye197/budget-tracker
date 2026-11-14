@@ -14,13 +14,48 @@ public final class BudgetTrackerOrganizationDemo {
     }
 
     /**
+     * Formats a monetary amount in cents.
+     *
+     * @param cents
+     *            amount in cents
+     * @return formatted dollar amount
+     */
+    private static String formatMoney(long cents) {
+        boolean negative = cents < 0;
+        long dollars = cents / 100;
+        long remainder = cents % 100;
+
+        String dollarPart = Long.toString(dollars);
+        if (negative && dollars == 0) {
+            dollarPart = "-0";
+        }
+
+        if (remainder < 0) {
+            remainder = -remainder;
+        }
+
+        String centPart = Long.toString(remainder);
+        if (remainder < 10) {
+            centPart = "0" + centPart;
+        }
+
+        if (negative) {
+            if (dollarPart.startsWith("-")) {
+                dollarPart = dollarPart.substring(1);
+            }
+            return "-$" + dollarPart + "." + centPart;
+        }
+
+        return "$" + dollarPart + "." + centPart;
+    }
+
+    /**
      * Main method.
      *
      * @param args
      *            command-line arguments
      */
     public static void main(String[] args) {
-
         SimpleWriter out = new SimpleWriter1L();
 
         /*
@@ -43,14 +78,11 @@ public final class BudgetTrackerOrganizationDemo {
         event.recordExpense("Equipment Rental", 10000, "Equipment");
 
         /*
-         * Display the organization's financial information.
+         * Display organization finances.
          */
         out.println("===== EVENT BUDGET =====");
-
         out.println("Organization: " + event.getName());
-
-        out.println("Remaining Funds: $" + event.getBalance() / 100.0);
-
+        out.println("Remaining Funds: " + formatMoney(event.getBalance()));
         out.println();
 
         if (event.isOverBudget()) {

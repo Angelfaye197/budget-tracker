@@ -1,4 +1,6 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -84,7 +86,7 @@ public class BudgetTrackerTest {
         tracker.setBudget(10000);
         tracker.addTransaction("Shopping", -15000, "Personal");
 
-        assertEquals(true, tracker.isOverBudget());
+        assertTrue(tracker.isOverBudget());
     }
 
     /**
@@ -123,6 +125,7 @@ public class BudgetTrackerTest {
     @Test
     public void testNewInstance() {
         BudgetTracker tracker = new BudgetTracker1();
+
         tracker.setBudget(50000);
         tracker.addTransaction("Gas", -3000, "Transport");
 
@@ -171,7 +174,7 @@ public class BudgetTrackerTest {
         a.addTransaction("Gas", -3000, "Transport");
         b.addTransaction("Gas", -3000, "Transport");
 
-        assertEquals(true, a.equals(b));
+        assertTrue(a.equals(b));
     }
 
     /**
@@ -196,12 +199,12 @@ public class BudgetTrackerTest {
         BudgetTracker tracker = new BudgetTracker1();
 
         tracker.setBudget(50000);
-        tracker.addTransaction("Gas", -3000, "Transport");
+        tracker.addTransaction("Gas", -3000, "Transportation");
 
         String result = tracker.toString();
 
-        assertEquals(true, result.contains("Budget: $500.0"));
-        assertEquals(true, result.contains("Gas"));
+        assertTrue(result.contains("Budget: $500.00"));
+        assertTrue(result.contains("Gas: -$30.00"));
     }
 
     /**
@@ -215,7 +218,7 @@ public class BudgetTrackerTest {
         assertEquals(0L, tracker.getTotalExpenses());
         assertEquals(0L, tracker.getBalance());
         assertEquals(0L, tracker.getExpensesByCategory("Food"));
-        assertEquals(false, tracker.isOverBudget());
+        assertFalse(tracker.isOverBudget());
     }
 
     /**
@@ -228,7 +231,7 @@ public class BudgetTrackerTest {
         tracker.setBudget(10000);
         tracker.addTransaction("Books", -10000, "School");
 
-        assertEquals(false, tracker.isOverBudget());
+        assertFalse(tracker.isOverBudget());
     }
 
     /**
@@ -242,7 +245,7 @@ public class BudgetTrackerTest {
         a.setBudget(10000);
         b.setBudget(20000);
 
-        assertEquals(false, a.equals(b));
+        assertFalse(a.equals(b));
     }
 
     /**
@@ -259,7 +262,7 @@ public class BudgetTrackerTest {
         b.addTransaction("Gas", -3000, "Transport");
         b.addTransaction("Food", -2000, "Food");
 
-        assertEquals(false, a.equals(b));
+        assertFalse(a.equals(b));
     }
 
     /**
@@ -323,11 +326,12 @@ public class BudgetTrackerTest {
     @Test(expected = IllegalArgumentException.class)
     public void testNegativeBudget() {
         BudgetTracker tracker = new BudgetTracker1();
+
         tracker.setBudget(-1000);
     }
 
     /**
-     * Tests retrieving a transaction without removing it from the tracker.
+     * Tests retrieving a transaction without removing it.
      */
     @Test
     public void testGetTransaction() {
@@ -342,12 +346,12 @@ public class BudgetTrackerTest {
         assertEquals(-3000L, t.getAmount());
         assertEquals("Transport", t.getCategory());
 
-        // Verify the transaction was not removed
+        // Verify that the transaction was not removed.
         assertEquals(2, tracker.size());
     }
 
     /**
-     * Tests comparing a BudgetTracker with an object of a different type.
+     * Tests comparing a BudgetTracker with an unrelated object.
      */
     @Test
     public void testEqualsDifferentObject() {
@@ -355,8 +359,8 @@ public class BudgetTrackerTest {
 
         tracker.setBudget(50000);
 
-        String other = "Not a BudgetTracker";
+        Object other = "Not a BudgetTracker";
 
-        assertEquals(false, tracker.equals(other));
+        assertFalse(tracker.equals(other));
     }
 }

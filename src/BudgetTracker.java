@@ -1,4 +1,3 @@
-
 /**
  * Enhanced interface for the BudgetTracker component.
  *
