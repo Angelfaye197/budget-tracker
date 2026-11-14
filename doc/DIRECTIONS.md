@@ -65,29 +65,30 @@ To complete the assignment, you must do the following **in order**:
 8. Create a pull request from your branch to `main`
 9. Submit a link of the pull request to Carmen
 
-## Assignment Reflection
+### Reflection
 
-Following the completion of the portfolio project, please take some time to
-fill out the following reflection prompts. There is no word count, but at least
-a few sentences per question would be ideal.
+Now that you have created a software component from scratch, it's time to
+reflect on that process as well as take some time to think about your
+growth as a developer. Below, you will find a series of reflection prompts.
+Take some time to fill them out honestly.
 
 > A common gripe that students express is how much they feel the work they do
 > in class fails to map to the real world. Now that you've had a chance to
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+This project helped me understand that software development is more than just writing code. Before, I mostly focused on making sure my programs worked and gave the right answers. While working on my BudgetTracker project, I learned that planning, organizing, and testing are also important. I had to make sure all the different parts of my program worked together. It also showed me how the things we learn in class can be used to create something useful in real life.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+One thing I struggled with was understanding how all the different Java files connected. At first, I was confused about where certain methods belonged and how the interfaces and classes worked together. I also had some trouble fixing errors when my tests failed. To overcome this, I reviewed what we learned in class, worked on one part at a time, and tested my code to find mistakes. This helped me better understand how everything worked.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+This project made me enjoy software development more because I got to create something I was interested in. I liked that I could choose my own idea instead of following an assignment where everything was already decided. There were times when I got frustrated because something wasn't working, but it felt good when I finally figured it out. I still enjoy programming, and this project showed me that I like creating things that can actually help people.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -95,25 +96,35 @@ a few sentences per question would be ideal.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I learned how to better organize my Java code and use interfaces, abstract classes, and different methods together. I also got more practice with JUnit testing and fixing errors. Another skill I improved was using GitHub to save and manage my work. Besides coding, I learned how to be more patient when solving problems and how to break a big project into smaller steps so it wouldn't feel as overwhelming.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Created a Java BudgetTracker program to help manage income, expenses, and spending limits.
+
+- Used interfaces, abstract classes, and OSU Software Components to organize the program.
+
+- Wrote and ran 28 JUnit tests to check that the program worked correctly.
+
+- Developed two examples showing how the program could be used for personal budgeting and student organization finances.
+
+- Used Git and GitHub to save and manage project files.
+
+- Improved problem-solving, debugging, and time management skills.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+As a Computer Engineering student, this project helped me become more interested in programming and software development. I liked being able to create something that could be useful in everyday life. It also showed me that the same program can be used in different ways. I am still figuring out exactly what I want to do in the future, but this project made me want to keep improving my coding skills and explore how software and hardware can work together.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I want to keep improving by practicing Java and working on more coding projects outside of class. I also want to get better at solving problems on my own instead of always needing help when something goes wrong. Since I'm studying Computer Engineering, I would also like to work on projects that involve both software and hardware. I could ask my professors, teaching assistants, and people I've worked with during internships for advice. I think learning from people with more experience will help me figure out what I want to do in the future.
 
 ## Assignment Advice
 
