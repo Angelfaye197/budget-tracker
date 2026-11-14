@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Angel Faye Baleskie
+- **Dot Number**: Baleskie.1
+- **Due Date**: 11/13/2026 @ 1:50pm
 
 ## Assignment Overview
 
@@ -49,8 +49,6 @@ Many of these additional techniques are somewhat out of the scope of this
 course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -307,18 +305,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+This project helped me understand that software development is more than just writing code. Before, I mostly focused on making sure my programs worked and gave the right answers. While working on my BudgetTracker project, I learned that planning, organizing, and testing are also important. I had to make sure all the different parts of my program worked together. It also showed me how the things we learn in class can be used to create something useful in real life.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+One thing I struggled with was understanding how all the different Java files connected. At first, I was confused about where certain methods belonged and how the interfaces and classes worked together. I also had some trouble fixing errors when my tests failed. To overcome this, I reviewed what we learned in class, worked on one part at a time, and tested my code to find mistakes. This helped me better understand how everything worked.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+This project made me enjoy software development more because I got to create something I was interested in. I liked that I could choose my own idea instead of following an assignment where everything was already decided. There were times when I got frustrated because something wasn't working, but it felt good when I finally figured it out. I still enjoy programming, and this project showed me that I like creating things that can actually help people.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,25 +324,35 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I learned how to better organize my Java code and use interfaces, abstract classes, and different methods together. I also got more practice with JUnit testing and fixing errors. Another skill I improved was using GitHub to save and manage my work. Besides coding, I learned how to be more patient when solving problems and how to break a big project into smaller steps so it wouldn't feel as overwhelming.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Created a Java BudgetTracker program to help manage income, expenses, and spending limits.
+
+- Used interfaces, abstract classes, and OSU Software Components to organize the program.
+
+- Wrote and ran 28 JUnit tests to check that the program worked correctly.
+
+- Developed two examples showing how the program could be used for personal budgeting and student organization finances.
+
+- Used Git and GitHub to save and manage project files.
+
+- Improved problem-solving, debugging, and time management skills.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+As a Computer Engineering student, this project helped me become more interested in programming and software development. I liked being able to create something that could be useful in everyday life. It also showed me that the same program can be used in different ways. I am still figuring out exactly what I want to do in the future, but this project made me want to keep improving my coding skills and explore how software and hardware can work together.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I want to keep improving by practicing Java and working on more coding projects outside of class. I also want to get better at solving problems on my own instead of always needing help when something goes wrong. Since I'm studying Computer Engineering, I would also like to work on projects that involve both software and hardware. I could ask my professors, teaching assistants, and people I've worked with during internships for advice. I think learning from people with more experience will help me figure out what I want to do in the future.
 
 ### Changelog
 
@@ -383,8 +391,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -435,7 +441,5 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
