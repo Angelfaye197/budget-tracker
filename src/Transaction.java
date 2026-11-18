@@ -1,12 +1,16 @@
-
 /**
  * Represents a single financial transaction. Positive amounts are income.
  * Negative amounts are expenses. All amounts are stored in cents.
  */
 public final class Transaction {
 
+    /** Human-readable transaction description. */
     private final String description;
+
+    /** Signed amount in cents: positive for income, negative for expenses. */
     private final long amount;
+
+    /** Category used to group expenses. */
     private final String category;
 
     /**
@@ -18,14 +22,15 @@ public final class Transaction {
      *            signed amount in cents
      * @param category
      *            transaction category
+     * @requires description is not blank and category is not blank and amount
+     *           != 0
      */
     public Transaction(String description, long amount, String category) {
 
-        if (description == null || description.trim().isEmpty()
-                || category == null || category.trim().isEmpty()
-                || amount == 0) {
-            throw new IllegalArgumentException("Invalid transaction");
-        }
+        assert !description.trim()
+                .isEmpty() : "Violation of: valid description";
+        assert !category.trim().isEmpty() : "Violation of: valid category";
+        assert amount != 0 : "Violation of: amount != 0";
 
         this.description = description;
         this.amount = amount;

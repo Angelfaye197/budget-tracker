@@ -3,12 +3,10 @@ import components.standard.Standard;
 /**
  * Kernel interface for a Budget Tracker.
  *
- * <p>
  * A BudgetTracker maintains an ordered sequence of transactions and a
  * nonnegative spending limit. All monetary values are stored in cents. Positive
  * transaction amounts represent income, while negative amounts represent
  * expenses.
- * </p>
  *
  * @mathmodel type BudgetTracker is modeled by (transactions: string of
  *            Transaction, budget: integer)
@@ -26,8 +24,8 @@ public interface BudgetTrackerKernel extends Standard<BudgetTracker> {
      *            signed amount in cents
      * @param category
      *            transaction category
-     * @requires description != null and description is not blank and category
-     *           != null and category is not blank and amount != 0
+     * @requires description is not blank and category is not blank and amount
+     *           != 0
      * @ensures the new transaction is appended to the end of the transaction
      *          sequence and the budget is unchanged
      */
@@ -52,6 +50,8 @@ public interface BudgetTrackerKernel extends Standard<BudgetTracker> {
      *            position of the transaction
      * @return the transaction at index
      * @requires 0 <= index and index < size()
+     * @aliases reference returned by getTransaction aliases the transaction
+     *          stored at index
      * @ensures the returned transaction is the transaction at index and this
      *          BudgetTracker is unchanged
      */

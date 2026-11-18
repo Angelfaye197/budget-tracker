@@ -42,7 +42,6 @@ public interface BudgetTracker extends BudgetTrackerKernel {
      * @param category
      *            category to search
      * @return total expenses for the category
-     * @requires category != null
      */
     long getExpensesByCategory(String category);
 }
